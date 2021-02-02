@@ -42,6 +42,21 @@ namespace Board
             p.position = pos;
         }
 
+        public Pieces removePiece(Position pos)
+        {
+            if (piece(pos) == null)
+            {
+                return null;
+            }
+            else
+            {
+                Pieces aux = piece(pos);
+                aux.position = null;
+                pieces[pos.row, pos.column] = null;
+                return aux;
+            }
+        }
+
         public bool validPosition(Position pos)
         {
             if (pos.row < 0 || pos.row >= rows || pos.column < 0 || pos.column >= columns)

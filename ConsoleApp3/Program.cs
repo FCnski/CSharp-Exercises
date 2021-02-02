@@ -12,15 +12,30 @@ namespace ChessGame
 
             try
             {
-                GameBoard brd = new GameBoard(8, 8);
+                ChessMatch match = new ChessMatch();
 
+                while (!match.Finished)
+                {
+                    Console.Clear();
+                    Screen.PrintBoard(match.brd);
 
+                    Console.WriteLine("");
+                    Console.Write("Origin: ");
+                    Position origin = Screen.readChessPosition().toPosition();
 
-                brd.insertPiece(new Tower(brd, Color.Black), new Position(0, 0));
-                brd.insertPiece(new Tower(brd, Color.Black), new Position(1, 8));
-                brd.insertPiece(new King(brd, Color.Black), new Position(0, 3));
+                    bool[,] possiblePositions = match.brd.piece(origin).possibleMovements();
 
-                Screen.PrintBoard(brd);
+                    Console.Clear();
+                    Screen.PrintBoard(match.brd, possiblePositions);
+
+                    Console.WriteLine("");
+                    Console.Write("Destiny: ");
+                    Position destiny = Screen.readChessPosition().toPosition();
+
+                    match.executesMovement(origin, destiny);
+                }
+
+                Screen.PrintBoard(match.brd);
 
                 Console.ReadLine();
             }
