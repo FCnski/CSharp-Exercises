@@ -1,0 +1,7 @@
+C:\Users\felip\source\repos\ConsoleApp3\bin\Debug\ConsoleApp3.exe.config
+C:\Users\felip\source\repos\ConsoleApp3\bin\Debug\ConsoleApp3.exe
+C:\Users\felip\source\repos\ConsoleApp3\bin\Debug\ConsoleApp3.pdb
+C:\Users\felip\source\repos\ConsoleApp3\obj\Debug\chess_console.csprojAssemblyReference.cache
+C:\Users\felip\source\repos\ConsoleApp3\obj\Debug\chess_console.csproj.CoreCompileInputs.cache
+C:\Users\felip\source\repos\ConsoleApp3\obj\Debug\ConsoleApp3.exe
+C:\Users\felip\source\repos\ConsoleApp3\obj\Debug\ConsoleApp3.pdb
